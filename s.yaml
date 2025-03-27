@@ -1,0 +1,19 @@
+edition: 1.0.0
+name: my-framework-app
+access: default
+services:
+  framework:
+    component: fc
+    props:
+      region: ap-southeast-1
+      service:
+        name: serverless-devs-application
+      function:
+        name: new-api-kr4j
+        description: Initialize
+        runtime: go1
+        memorySize: 128
+        cpu: 0.05
+        timeout: 60
+        codeUri: ./
+        diskSize: 512
